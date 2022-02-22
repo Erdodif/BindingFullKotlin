@@ -34,12 +34,15 @@ Az *xml* forráshoz saját típusú változót rendelhetünk, és annak a param�
 > Mondjuk a majdani Film példával az egyik textView-hoz a film címét rendeljük, a másikhoz a kategóriát, és amikor a binding setFilm() metódusát hívjuk meg, az abban deffiniált film paramétereit leosztja az annak megfelelő textView-kba, de ezeket megnézzük majd élesben is.
 
 A DataBinding magába foglalja a ViewBinding osztályt, így elég csak az egyiket beállítani a gradle fájlban.
+A DataBinding megfelelő működéséhez(későbbi annotációk használatához) a `kotlin-kapt` pluginra is szükség lesz.
 
 ### Importálás
 
 > ```gradle
 > android{
 >    …
+>     apply plugin: 'kotlin-kapt'
+>
 >     buildFeatures{
 >         viewBinding true
 >     }
